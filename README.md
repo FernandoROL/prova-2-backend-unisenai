@@ -20,3 +20,37 @@ npm install
 npm start
 ```
 
+## Queries graphql
+
+```
+# Retorna todos os períodos e disciplinas
+query {
+  periodos {
+    periodo
+    disciplinas {
+      id
+      nome
+      descricao
+    }
+  }
+}
+
+# Retorna todas as disciplinas
+query {
+  disciplinas {
+    id
+    nome
+    descricao
+  }
+}
+
+# Busca uma disciplina específica por ID
+query {
+  disciplina(id: "1") {
+    nome
+    descricao
+  }
+}
+
+```
+
